@@ -53,3 +53,12 @@ class User(CRideModel, AbstractUser):
         help_text='Change to true when the user has verified its email address.'
     )
 
+    def __str__(self):
+        """ Return username. """
+
+        return self.username
+    
+    def get_short_name(self):
+        """ Return username. """
+
+        return self.username
