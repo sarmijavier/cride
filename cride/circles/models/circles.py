@@ -71,5 +71,10 @@ def data_from_csv(file):
             if row[0] == 'name':
                 pass
             else:
-                circle = Circle(name=row[0], slug_name=row[1], is_public=row[2], verified=row[3], members_limit=row[4])
-                circle.save()
+
+                if row[4] == '0':
+                    circle = Circle(name=row[0], slug_name=row[1], is_public=row[2], verified=row[3], is_limited=0, members_limit=row[4])
+                    circle.save()
+                else:
+                    circle = Circle(name=row[0], slug_name=row[1], is_public=row[2], verified=row[3], is_limited=1, members_limit=row[4])
+                    circle.save()
