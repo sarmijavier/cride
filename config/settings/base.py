@@ -41,9 +41,11 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+
 ]
 
 THIRD_PARTY_APPS = [
+    'rest_framework',
 ]
 LOCAL_APPS = [
     'cride.users.apps.UsersAppConfig',
